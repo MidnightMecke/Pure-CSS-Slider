@@ -1,0 +1,68 @@
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+/* General Styling */
+
+body {
+  background: #f0f0f0;
+}
+
+article.slider {
+  height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+}
+
+section.slide {
+  animation: round 20s infinite;
+  content: " ";
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* Setup of Slides */
+section.slide:first-child { 
+  animation-delay: 0s !important; 
+  background: #29aae1 url(../images/slide1.png);
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+section.slide:nth-child(2) { 
+  animation-delay: 5s !important; 
+  background: #673090 url(../images/slide2.png);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+section.slide:nth-child(3) { 
+  animation-delay: 10s !important; 
+  background: #6ebe35 url(../images/slide3.png);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+section.slide:nth-child(4) { 
+  animation-delay: 15s !important; 
+  background: #e0a32a url(../images/slide4.png);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+section.slide:last-child { 
+  animation-delay: 20s !important; 
+  background: #c0c0c0 url(../images/slide5.png); 
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Animation */
+@keyframes round {   
+  25% { opacity:1; }
+  50% { opacity:0; }
+} 
